@@ -1,14 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Shelf</title>
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/book.css' %}">
 </head>
+
 <body>
-    <a href="{% url 'books_list' %}">
-        <h1>Free Shelf</h1>
-    </a>
-        {% block content %} {% endblock %}
+    <h1>Free Shelf</h1>
+
+    {% block content %} {% endblock %}
 </body>
+
 </html>

@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.base, name='base'),
     path('books/', views.books_list, name='books_list'),
+    path('books/<slug:slug>/', views.books_by_tag, name='books-by-tag'), 
 ]
 

@@ -1,12 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1> Recently added Books</h1>
+<!-- <h1> Recently added Books</h1>
 <a href="{% url 'books_list' %}">
 <h2>{{book.title}}</h2></a>
 <h3>by {{book.auhtor}}</h3>
 <h4>{{book.description}}</h4>
-<p>{{book.created_at}}</p>
+<p>{{book.created_at}}</p> -->
+{% for book in books %}
+<h2><a href="{{book.url}}">{{ book.title }}</a></h2>
+<h3>by {{ book.author }}</h3>
+<p>{{ book.description }}</p>
+<h4>added:{{ book.created_at }}</h4>
+
+{% endfor %}
 
 
 {% endblock %}
