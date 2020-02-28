@@ -23,3 +23,4 @@ urlpatterns = [
     path('', views.base, name='base'),
     path('books/', views.books_list, name='books_list'),
 ]
+
