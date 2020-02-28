@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Recently added Books</h1>
+<a href="{% url 'books_list' %}">
+<h2>{{book.title}}</h2></a>
+<h3>by {{book.auhtor}}</h3>
+<h4>{{book.description}}</h4>
+<p>{{book.created_at}}</p>
+
+
+{% endblock %}
