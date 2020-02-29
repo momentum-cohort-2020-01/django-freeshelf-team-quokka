@@ -9,9 +9,9 @@
 <p>{{book.created_at}}</p> -->
 {% for book in books %}
 <h2><a href="{{book.url}}">{{ book.title }}</a></h2>
-<h3>by {{ book.author }}</h3>
-<p>{{ book.description }}</p>
-<h4>added:{{ book.created_at }}</h4>
+<h4>by {{ book.author }}</h4>
+<h5>{{ book.description }}</hf>
+<h6>added:{{ book.created_at }}</h6>
 
 {% endfor %}
 
