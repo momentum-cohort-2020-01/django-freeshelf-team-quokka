@@ -2,12 +2,12 @@
 
 {% block content %}
 {% for book in books %}
-
-<h2><a href="{{book.url}}">{{ book.title }}</a></h2>
-<h4>by {{ book.author }}</h4>
-<h5>{{ book.description }}</h5>
-<h6>added:{{ book.created_at }} | Category: <a href="/books/{{book.category.slug}}">{{book.category.title}}</a></h6>
-
+<div class="book_container">
+    <h2><a href="{{book.url}}">{{ book.title }}</a></h2>
+    <h4>by {{ book.author }}</h4>
+    <h5>{{ book.description }}</h5>
+    <h6>added:{{ book.created_at }} | Category: <a href="/books/{{book.category.slug}}">{{book.category.title}}</a></h6>
+</div>
 
 
 {% endfor %}

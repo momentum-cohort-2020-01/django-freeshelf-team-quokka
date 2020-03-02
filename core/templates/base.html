@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h2>Free Shelf</h2>
+    <h2 class="header">Free Shelf</h2>
     <p>Books by category: </p>
     <div>
         <a href='/books/'> All | </a>
@@ -21,16 +21,15 @@
         <a href='/books/python/'> Python </a>
 
     </div>
-    <h3>Resently added books</h3>
-
-    <div>
-        <a href='/books/'> Most recently added</a>
-        <a href='/books/old'> Reverse order of being added.</a>
 
 
-    </div>
+    <h/h3> <h3><a href='/books/'> Resently added Books</a></h3>
+        <h3><a href='/books/old'> Oldest Books</a></h3>
 
-    {% block content %} {% endblock %}
+
+        </div>
+
+        {% block content %} {% endblock %}
 </body>
 
 </html>
