@@ -5,13 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Shelf</title>
+    {% block title %}<title>Freeshelf</title>{% endblock %}
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/book.css' %}">
 </head>
 
 <body>
-    <h1>Free Shelf</h1>
+    <h2>Free Shelf</h2>
+    <p>Books by category: </p>
+    <div>
+        <a href='/books/'> All | </a>
+        <a href='/books/html/'> HTML | </a>
+        <a href='/books/css/'> CSS | </a>
+        <a href='/books/javascript/'> JavaScript | </a>
+        <a href='/books/python/'> Python </a>
+
+    </div>
+    <h3>Resently added books</h3>
+
+    <div>
+        <a href='/books/'> Most recently added</a>
+        <a href='/books/old'> Reverse order of being added.</a>
+
+
+    </div>
 
     {% block content %} {% endblock %}
 </body>

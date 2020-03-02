@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>These are {{book.category}} Books</h1>
+<h1>These are {{category.title}} Books</h1>
 {% for book in books %}
-<ul>{{book}}</ul>
+<h2><a href="{{book.url}}">{{ book.title }}</a></h2>
+<h4>by {{ book.author }}</h4>
+<h5>{{ book.description }}</h5>
+<h6>added:{{ book.created_at }}</h6>
 {% endfor %}
+
 {% endblock %}
