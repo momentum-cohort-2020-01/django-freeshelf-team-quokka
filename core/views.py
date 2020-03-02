@@ -11,12 +11,17 @@ def base(request):
     return HttpResponse('hello world')
 
 def books_list(request):
-    books = Book.objects.all()
-    return render (request, 'core/books_list.html', {"books": books})
- 
-# def books_list(request):
-#     books = Book.objects.filter(created_at__lte=timezone.now()).order_by('created_date')
-#     return render(request, 'core/books_list.html', {})
+    books = Book.objects.order_by('-created_at')
+    return render(request, 'core/books_new.html', {"books": books})
+    
+
+def books_old(request):
+    books = Book.objects.order_by('created_at')
+    return render(request, 'core/books_old.html', {"books": books})
+
+def books_title(request):
+    books = Book.objects.order_by('title')
+    return render(request, 'core/books_title.html', {"books": books})
 
 def books_by_category(request, slug):
     category = Category.objects.get(slug=slug)
