@@ -7,9 +7,6 @@ from .models import Book, Category
 from .forms import BookForm
 
 # Create your views here.
-def base(request):
-    return HttpResponse('hello world')
-
 def books_list(request):
     books = Book.objects.order_by('-created_at')
     return render(request, 'core/books_new.html', {"books": books})
