@@ -23,13 +23,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('accounts/', include('registration.backends.default.urls')),
     path('admin/', admin.site.urls),
-    path('', views.base, name='base'),
-    path('books/', views.books_list, name='books_list'),
+    path('thing', views.base, name='base'),
+    path('', views.books_list, name='books_list'),
     path('books/<slug:slug>/', views.books_by_category, name='books-by-category'), 
     path('books/old', views.books_old, name='books_old'),
     path('books/title', views.books_title, name='books_title'),
     
    
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
