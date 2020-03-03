@@ -2,7 +2,7 @@
 
 {% block content %}
 {% for book in books %}
-
+<img class="sizing" id="{{book.image.url}}">
 <h2><a href="{{book.url}}">{{ book.title }}</a></h2>
 <h4>by {{ book.author }}</h4>
 <h5>{{ book.description }}</h5>
