@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from PIL import Image
 
 
 
@@ -11,7 +12,7 @@ class Book(models.Model):
     description = models.TextField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey("Category", on_delete=models.DO_NOTHING, blank=True, null=True)
-    
+    image = models.ImageField(default="default.png")
 
     def __str__ (self):
         return f"Book title: {self.title} author: {self.author} description: {self.description} "
